@@ -1,0 +1,11 @@
+name: function-python
+namespace: ""
+runtime: python
+image: quay.io/kskels/function-python:latest
+imageDigest: sha256:2d39ce7a4ec359613ed29b0852aca77b095a1ee34e1e6834abf81185573c3aab
+trigger: http
+builder: quay.io/boson/faas-python-builder:v0.8.1
+builderMap:
+  default: quay.io/boson/faas-python-builder
+env: {}
+annotations: {}
