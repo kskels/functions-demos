@@ -1,6 +1,8 @@
 from parliament import Context
 
 import logging
+import random
+import time
 
 logging.basicConfig(level=logging.INFO)
 
@@ -12,7 +14,13 @@ def main(context: Context):
     CloudEvent received with the request.
     """
 
-    logging.info(context.cloud_event['source'])
-    logging.info(context.cloud_event['type'])
+    if context.cloud_event is not None:
+        logging.info(context.cloud_event['source'])
+        logging.info(context.cloud_event['type'])
+
+    else:
+        sleeptime = random.uniform(0, 2)
+        time.sleep(sleeptime)
+        logging.info(f"Request delay ${sleeptime}")
 
     return { "message": "Howdy!" }, 200
