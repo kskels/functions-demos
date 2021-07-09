@@ -1,3 +1,4 @@
 # Functions Demos
 
-Simple functions using OpenShift Serverless Functions.
+Sample apps using OpenShift Serverless Functions.
+See https://www.youtube.com/watch?v=ofTvUwRIzEY
